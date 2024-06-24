@@ -30,7 +30,7 @@ Como parte do processo de melhoria contínua deste projeto, os próximos passos 
 - Ajustes de design para alinhar mais de perto com a prototipagem inicial.
 - Testes adicionais para garantir a estabilidade e a funcionalidade do sistema.
 
-##Acesse aqui:
+###Acesse aqui:
 - https://andressahfn.github.io/focinho-shop/
 
 ### Contato
