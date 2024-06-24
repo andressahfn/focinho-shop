@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Preconexão às fontes do Google para melhorar o desempenho de carregamento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Definindo o conjunto de caracteres para UTF-8 -->
+  <meta charset="UTF-8" />
+  <!-- Ajuste da viewport para garantir responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título da página -->
+  <title>PetShop | Serviços</title>
+
+  <!-- Importação de fontes do Google Fonts (Open Sans e Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Importação do arquivo CSS personalizado para a página -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Div principal para a estrutura da página -->
+  <div class="page">
+    <!-- Seção de navegação -->
+    <nav>
+      <!-- Link para a página inicial com logo e nome da loja -->
+      <a href="#">
+        <img src="assets/logo_focinhos.png" alt="Logo Petshop" class="logo-img-focinho" /><strong>FOCINHO</strong><span>SHOP</span>
+      </a>
+      <!-- Lista de navegação -->
+      <ul>
+        <!-- Link para a página inicial -->
+        <li><a href="index.html">Home</a></li>
+        <!-- Menu dropdown para produtos -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Produtos</a>
+          <div class="dropdown-content">
+            <a href="produtos-caes.html">Cães</a>
+            <a href="produtos-gatos">Gatos</a>
+            <a href="produtos-aves">Aves</a>
+          </div>
+        </li>
+        <!-- Menu dropdown para serviços -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Serviços</a>
+          <div class="dropdown-content">
+            <a href="servicos.html">Banho e Tosa</a>
+            <a href="servicos.html">Tosa Higiênica</a>
+            <a href="servicos.html">Vacinação</a>
+            <a href="servicos.html">Consulta veterinária</a>
+          </div>
+        </li>
+        <!-- Link para a página de cadastro -->
+        <li><a href="cadastro.html">Cadastre-se</a></li>
+      </ul>
+    </nav>
+    <!-- Conteúdo principal da página -->
+    <main>
+      <!-- Seção de serviços -->
+      <section>
+        <div class="text-section">
+          <h1>Serviços para seu Pet</h1>
+          <p>
+            Oferecemos serviços de banho e tosa para garantir que seu pet
+            fique sempre saudável e feliz. Preencha o formulário abaixo para
+            agendar o próximo cuidado do seu amiguinho!
+          </p>
+        </div>
+
+        <!-- Formulário para agendamento de serviços -->
+        <form>
+          <fieldset>
+            <legend>Cadastro do Pet</legend>
+            <!-- Campo para nome do pet -->
+            <label for="nomePet">Nome do Pet:</label>
+            <input type="text" id="nomePet" name="nomePet" required />
+            <!-- Campo para tipo do pet -->
+            <label for="tipoPet">Tipo do Pet:</label>
+            <input type="text" id="tipoPet" name="tipoPet" required />
+            <!-- Campo para raça do pet -->
+            <label for="raca">Raça:</label>
+            <input type="text" id="raca" name="raca" required />
+            <br>
+            <!-- Campo para temperamento do pet -->
+            <label for="tempPet">Temperamento:</label>
+            <input type="text" id="tempPet" name="tempPet" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Agendamento</legend>
+            <!-- Campo para selecionar serviço -->
+            <label for="servico">Serviço:</label>
+            <select id="servico" name="servico" required>
+              <option value="banho">Banho</option>
+              <option value="tosa">Tosa</option>
+              <option value="ambos">Banho e Tosa</option>
+              <option value="consulta">Consulta Veterinária</option>
+              <option value="vacinacao">Vacinação</option>
+            </select>
+            <!-- Campo para data e hora do agendamento -->
+            <label for="dataHora">Data / Hora:</label>
+            <input type="datetime-local" id="dataHora" name="dataHora" required />
+            <!-- Campo para porte do animal -->
+            <label for="porte">Porte do Animal:</label>
+            <input type="text" id="porte" name="porte" required />
+            <!-- Campo para opção de tele-busca -->
+            <label for="teleBusca">Opção de Tele-Busca:</label>
+            <input type="checkbox" id="teleBusca" name="teleBusca" />
+          </fieldset>
+
+          <!-- Botão para enviar o formulário de agendamento -->
+          <button type="submit">Agendar Serviço</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+      Projeto Fundamentos de Sistemas Web - <span>PUCRS</span> | Feito com
+      <strong>muita pressa</strong> by <span>Andressa Hoffmann</span>
+    </footer>
+  </div>
+
+  <!-- Importação do arquivo JavaScript personalizado -->
+  <script src="script.js"></script>
+</body>
+
+</html>

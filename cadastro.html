@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Preconexão às fontes do Google para melhorar o desempenho de carregamento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Definindo o conjunto de caracteres para UTF-8 -->
+  <meta charset="UTF-8" />
+  <!-- Ajuste da viewport para garantir responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título da página -->
+  <title>FocinhoShop</title>
+  <!-- Ícone na aba do navegador -->
+  <link rel="icon" href="assets/logo_focinhos.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/logo_focinhos.png" type="image/x-icon">
+  <!-- Importação de fontes do Google Fonts (Open Sans e Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- Importação do CSS do Bootstrap para estilos e componentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Importação do JavaScript do Bootstrap para funcionalidades interativas -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+  <!-- Importação do arquivo CSS personalizado para a página -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Importação de um arquivo JavaScript personalizado -->
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Div principal para a estrutura da página -->
+  <div class="page">
+    <!-- Seção de navegação -->
+    <nav>
+      <!-- Link para a página inicial com logo e nome da loja -->
+      <a href="#">
+        <img src="assets/logo_focinhos.png" alt="Logo Petshop" class="logo-img-focinho" /><strong>FOCINHO</strong><span>SHOP</span>
+      </a>
+      <!-- Lista de navegação -->
+      <ul>
+        <!-- Link para a página inicial -->
+        <li><a href="index.html">Home</a></li>
+        <!-- Menu dropdown para produtos -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Produtos</a>
+          <div class="dropdown-content">
+            <a href="produtos-caes.html">Cães</a>
+            <a href="produtos-gatos">Gatos</a>
+            <a href="produtos-aves">Aves</a>
+          </div>
+        </li>
+        <!-- Menu dropdown para serviços -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Serviços</a>
+          <div class="dropdown-content">
+            <a href="servicos.html">Banho e Tosa</a>
+            <a href="servicos.html">Tosa Higiênica</a>
+            <a href="servicos.html">Vacinação</a>
+            <a href="servicos.html">Consulta veterinária</a>
+          </div>
+        </li>
+        <!-- Link para a página de cadastro -->
+        <li><a href="cadastro.html">Cadastre-se</a></li>
+      </ul>
+    </nav>
+    <!-- Conteúdo principal da página -->
+    <main>
+      <!-- Seção de cadastro -->
+      <section>
+        <div class="signup-section">
+          <h1>Cadastre-se</h1>
+          <p>Preencha o formulário abaixo para criar sua conta.</p>
+        </div>
+        <!-- Formulário de cadastro -->
+        <form action="">
+          <label for="nomeCliente">Nome do Cliente:</label>
+          <input type="text" id="nomeCliente" name="nomeCliente" required />
+
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required />
+
+          <label for="telefone">Telefone:</label>
+          <input type="number" id="telefone" name="telefone" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <!-- Opções de forma de contato preferida -->
+          <div class="formaContato">
+            <label for="formaContato">Melhor forma de contato:</label>
+            <input type="radio" id="m-tel" name="formaContato" value="m-tel" />
+            <label for="m-tel">Telefone</label>
+
+            <input type="radio" id="m-email" name="formaContato" value="m-email" />
+            <label for="m-email">E-mail</label>
+          </div>
+          <br />
+
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required />
+
+          <label for="confirmarSenha">Confirmar Senha:</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" required />
+          <br />
+          <!-- Botão para enviar o formulário -->
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+      Projeto Fundamentos de Sistemas Web - <span>PUCRS</span> | Feito com
+      <strong>muita pressa</strong> by <span>Andressa Hoffmann</span>
+    </footer>
+   
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Primeiramente, aqui no header utilizo duas fontes do Google Fontes (Open Sans e Poppins) por isso as chamadas aqui no header -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocinhoShop</title>
+  <!-- Ícone na aba do navegador -->
+  <link rel="icon" href="assets/logo_focinhos.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/logo_focinhos.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Poppins:wght@500;700&display=swap"
+    rel="stylesheet" />
+  <!-- Aqui faço a conexão da minha pagina de style.css, scripts.js e bootstrap -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script type="module" src="scripts/carousel.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="produtos.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+  <div class="page">
+    <nav>
+      <a href="#">
+        <img src="assets/logo_focinhos.png" alt="Logo Petshop"
+          class="logo-img-focinho" /><strong>FOCINHO</strong><span>SHOP</span>
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Produtos</a>
+          <div class="dropdown-content">
+            <a href="produtos-caes.html">Cães</a>
+            <a href="produtos-gatos.html">Gatos</a>
+
+            <a href="produtos-aves.html">Aves</a>
+
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Serviços</a>
+          <div class="dropdown-content">
+            <a href="servicos.html">Banho e Tosa</a>
+            <a href="servicos.html">Tosa Higiênica</a>
+
+            <a href="servicos.html">Vacinação</a>
+            <a href="servicos.html">Consulta veterinária</a>
+          </div>
+        </li>
+        <li><a href="cadastro.html">Cadastre-se</a></li>
+      </ul>
+    </nav>
+    <h2 class="oferta-semanal">OFERTAS DA SEMANA - 40% OFF</h2><br><br>
+    <main>
+
+      <div class="container mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/racao_cao_1.jpg" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/racao_cao_2.jpg" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/racao_cao_3.jpg" class="d-block w-100" alt="Imagem 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!--PRODUTOS-->
+        <section class="cardsServicos container mt-5">
+          <h2>Produtos que você encontra na Focinhos</h2>
+          <!-- primeira linha -->
+          <div class="row">
+            <!-- primeira coluna -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="assets/racao_cao_1.jpg"
+                  alt="lata com embalagem verde da ração úmida para cães" style="width: 100%" />
+                <div class="cardBody">
+                  <h3 class="cardTitle text-center">
+                    Pet Delícia Veggie Cães Adultos
+                  </h3>
+
+                  <p class="cardPrice">R$ 17.00</p>
+                  <p class="cardInfo">Frete Grátis</p>
+                  <div class="cardLink mb-3">
+                    <button>
+                      <a href="#">Comprar</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- segunda coluna -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="assets/racao_cao_2.jpg" alt="embalagem bordo de ração úmida para gatos"
+                  style="width: 100%" />
+                <div class="cardBody">
+                  <h3 class="cardTitle text-center">
+                    Pet Delícia Veggie Cães Adultos
+                  </h3>
+
+
+                  <p class="cardPrice">R$ 8.40</p>
+                  <p class="cardInfo">Frete Grátis</p>
+                  <div class="cardLink mb-3">
+                    <button>
+                      <a href="#">Comprar</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- terceira coluna -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="assets/racao_cao_3.jpg" alt="gato tomando banho" style="width: 100%" />
+                <div class="cardBody">
+                  <h3 class="cardTitle text-center">
+                    Pet Delícia Veggie Cães Adultos
+                  </h3>
+
+                  <p class="cardPrice">R$ 42.90</p>
+                  <p class="cardInfo">Frete Grátis</p>
+                  <div class="cardLink mb-3">
+                    <button>
+                      <a href="#">Comprar</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          </article>
+        </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </main>
+</body>
+<footer>
+  Projeto Fundamentos de Sistemas Web - <span>PUCRS</span> | Feito com
+  <strong>muita pressa</strong> by <span>Andressa Hoffmann</span>
+</footer>
+
+<script src="script.js"></script>
+</div>
+</body>
+
+</html>

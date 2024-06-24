@@ -1,0 +1,631 @@
+/* Primeiramente faço o reset das configurações de CSS padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  
+    /* Para uma melhor visualização das fontes em navegadores como Mozilla, Chrome e Edge */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Além de aplicar a fonte principal para todo o documento, gosto de configurar font-size para 62.5%, sendo assim, consigo utilizar o rem
+     de maneira mais facil, apenas divido o tamanho que quero por 10 e tenho o valor em rem. Utilizar rem ajuda na criação de um site mais responsivo */
+  :root {
+    font-family: "Open Sans", sans-serif;
+    font-size: 62.5%;
+  }
+  
+  /* Aqui monto o gradiente do background usando a paleta de cores do layout do site */
+  body {
+    background: linear-gradient(
+      180deg,
+      #ffff 80%,
+      #b493fe 100%
+    );
+  
+    min-height: 100vh;
+  }
+  
+  /* Estilização e posicionamento das tags semânticas */
+  .page {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.8rem;
+  }
+  
+  nav a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img-focinho{
+    width: 80px;
+    height: auto;
+  }
+
+  .cao-e-gato{
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  nav a strong {
+    color: #6c54c6;
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+  nav a span {
+    color: #b493fe;
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+  ul {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    list-style: none;
+  
+    display: flex;
+    gap: 4.8rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  li a,
+  .dropbtn {
+    display: inline-block;
+    color: #7f5af0;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16rem;
+    box-shadow: 0px 8px 16px 0px rgba(125, 73, 208, 0.5);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #7f5af0;
+    padding: 1.2rem 1.6rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    font-weight: 700;
+    opacity: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  ul li a {
+    color: #7f5af0;
+    opacity: 0.5;
+  }
+  
+  ul li a:hover {
+    font-weight: 700;
+    opacity: 1;
+  }
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 4.5rem;
+    line-height: 5.6rem;
+    font-weight: 500;
+    color: #000;
+    width: 49rem;
+  }
+  
+  h1 span {
+    color: #7f5af0;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #aa93ef;
+  
+    width: 43.8rem;
+  }
+  
+  section p {
+    margin: 4rem 0;
+  }
+  
+  button {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  
+    background: #aa93ef;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 1.4rem 3.2rem 1.5rem;
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  button:hover {
+    background: #7f5af0;
+  }
+  
+  footer {
+    color: #6c54c6;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+  
+    margin-top: 8rem;
+  }
+  
+  footer span {
+    color: #7f5af0;
+    font-weight: 700;
+  }
+  
+  /* Usando media queries para criação de estilos específicos para telas menores e tento tornar o site mais responsivo */
+  @media (max-width: 768px) {
+    body {
+      padding: 2rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  
+    ul {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    li a,
+    .dropbtn {
+      padding: 1rem;
+    }
+  
+    .dropdown-content {
+      min-width: 100%;
+    }
+  
+    main {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    h1 {
+      width: 100%;
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  
+    p {
+      width: 100%;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  
+    button {
+      padding: 1rem 2rem 1.1rem;
+    }
+  
+    footer {
+      margin-top: 4rem;
+    }
+  }
+  
+  /* Estilização da página de Serviços */
+  main {
+    justify-content: center;
+  }
+  main section {
+    text-align: left;
+  }
+  
+  .text-section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+  
+  .signup-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    border: 1px solid #7f5af0;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+    color: #7f5af0;
+    margin-bottom: 0.5rem;
+  }
+  
+  label {
+    color: #7f5af0;
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    padding: 0.8rem;
+    border: 1px solid #7f5af0;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  button {
+    background-color: #7f5af0;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #aa93ef;
+  }
+  
+  /* Grid de produtos, estilizaão simples dos mesmos para exibiçao */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .product {
+    border: 1px solid #aa93ef;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 50%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .product p {
+    font-size: 1.2rem;
+    color: #aa93ef;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product span {
+    font-size: 1.2rem;
+    color: #7f5af0;
+    font-weight: 700;
+  }
+  
+  .button-comprar {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* Aqui eu crio estilos específicos para telas menores e tento tornar o site mais responsivo */
+  @media (max-width: 768px) {
+    body {
+      padding: 2rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  
+    ul {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    li a,
+    .dropbtn {
+      padding: 1rem;
+    }
+  
+    .dropdown-content {
+      min-width: 100%;
+    }
+  
+    main {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    h1 {
+      width: 100%;
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  
+    p {
+      width: 100%;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    label,
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    button {
+      padding: 1rem 2rem 1.1rem;
+    }
+  
+    footer {
+      margin-top: 4rem;
+      
+    }
+  }
+
+
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 450px;
+    margin: auto;
+  }
+  
+  .carousel-item img {
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  .d-block w-100{
+    width: auto;
+    height: 25px;
+  }
+
+  .oferta-semanal{
+    text-align: center;
+    font-size: large;
+    color: #6c54c6;
+    font: bold;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tituloProdutos {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.125rem;
+    font-weight: 800;
+    color: var(--neutral);
+    line-height: 2.0625rem;
+    letter-spacing: 0.0125rem;
+    margin-top: 2.5rem;
+    padding: 2.5rem;
+  }
+  
+  .produtosSemana h2,
+  .cardsServicos h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--neutral);
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* margin-left: 10rem; */
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+  
+  .cardsServicos h2 {
+    margin-top: 1rem;
+  }
+  
+  .card {
+    border-radius: 1.25rem;
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card img {
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+  
+  .cardBody {
+    padding: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--neutral);
+  }
+  
+  .cardText,
+  .cardPrice,
+  .cardInfo {
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .cardText {
+    font-weight: 300;
+  }
+  
+  .cardPrice {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--accent);
+  }
+  
+  .cardLink {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  
+  .cardLink button {
+    width: 7rem;
+    height: 3rem;
+    border-radius: 1.25rem;
+    background-color: var(--accent);
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    /* margin: 5rem 0; */
+  }
+  
+  .cardLink button:hover {
+    background-color: #ecbe69;
+  }
+  
+  .cardLink a {
+    text-decoration: none;
+    color: var(--neutral);
+  }
+  
+  .btnBox {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  
+  .btnVejaMais {
+    width: 10.625rem;
+    height: 3.5625rem;
+    border-radius: 1.25rem;
+    background-color: var(--accent);
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    margin: 5rem 0;
+  }
+  
+  .btnVejaMais:hover {
+    background-color: #ecbe69;
+  }
+  
+  /* .informacoes {
+    margin-bottom: -18rem;
+  } */
+  
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: 46rem;
+    background-color: #f9f9f9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 1.2rem;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 3.5rem;
+  }
+  
+  .informacoes h2,
+  .informacoes h3,
+  .informacoes h4 {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .informacoes h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--neutral);
+    line-height: 2.0625rem;
+    letter-spacing: 0.0125rem;
+    margin-top: -1.5rem;
+    padding: 2.5rem;
+  }
+  
+  .informacoes h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .informacoes h4 {
+    font-weight: 700;
+  }
+  
+  .informacoes p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+  }
+  
+  .informacoes a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .racoes {
+    padding: 1.5rem 0;
+  }
+  
+  
+  
