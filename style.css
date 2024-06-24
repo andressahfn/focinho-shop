@@ -10,9 +10,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Além de aplicar a fonte principal para todo o documento, gosto de configurar font-size para 62.5%, sendo assim, consigo utilizar o rem
-     de maneira mais facil, apenas divido o tamanho que quero por 10 e tenho o valor em rem. Utilizar rem ajuda na criação de um site mais responsivo */
-  :root {
+   :root {
     font-family: "Open Sans", sans-serif;
     font-size: 62.5%;
   }
@@ -200,6 +198,45 @@
     font-weight: 700;
   }
   
+ 
+ .footer-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 1rem; /* Espaçamento inferior interno */
+ }
+ 
+ .footer-content p {
+   margin: 5px;
+ }
+ 
+ .footer-links {
+   font-size: small;
+   color: #fff; /* Cor do texto dos links */
+ }
+ 
+ .footer-links ul {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .footer-links ul li {
+   margin: 0 8px;
+ }
+ 
+ .footer-links ul li a {
+   color: #fff; /* Cor dos links */
+   text-decoration: none;
+   transition: opacity 0.3s ease; /* Transição suave */
+ }
+ 
+ .footer-links ul li a:hover {
+   opacity: 0.8; /* Opacidade ao passar o mouse */
+ }
+ 
+
   /* Usando media queries para criação de estilos específicos para telas menores e tento tornar o site mais responsivo */
   @media (max-width: 768px) {
     body {
@@ -357,6 +394,7 @@
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
+    color: #6c54c6;
   }
   
   /* Aqui eu crio estilos específicos para telas menores e tento tornar o site mais responsivo */
@@ -422,6 +460,7 @@
     }
   }
 
+  
 
 /* style.css */
 body {
@@ -554,24 +593,6 @@ body {
     justify-content: center;
   }
   
-  .btnVejaMais {
-    width: 10.625rem;
-    height: 3.5625rem;
-    border-radius: 1.25rem;
-    background-color: var(--accent);
-    border: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.3rem;
-    margin: 5rem 0;
-  }
-  
-  .btnVejaMais:hover {
-    background-color: #ecbe69;
-  }
-  
-  /* .informacoes {
-    margin-bottom: -18rem;
-  } */
   
   article {
     display: flex;
@@ -628,4 +649,6 @@ body {
   }
   
   
+
+
   
